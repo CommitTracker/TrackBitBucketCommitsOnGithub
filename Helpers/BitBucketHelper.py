@@ -6,7 +6,10 @@ class BitBucketHelper:
         self.app_password = data["AppPassword"]
         self.workspace = data["Workspace"]
         self.repo_slug = data["Repo"]
-        self.base_url = f"https://api.bitbucket.org/2.0/repositories/{self.workspace}/{self.repo_slug}"
+        if data.get('isPremium', False):  # Default to False if 'isPremium' is not in data
+            self.base_url = f"https://api.bitbucket.org/premium/2.0/repositories/{self.workspace}/{self.repo_slug}"
+        else:
+            self.base_url = f"https://api.bitbucket.org/2.0/repositories/{self.workspace}/{self.repo_slug}"
 
     def _get_headers(self):
         """Prepare authorization headers with Basic Auth using app password."""
