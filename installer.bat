@@ -26,5 +26,9 @@ if "%defaultsFound%"=="1" (
 echo Installing GitPython...
 python -m pip install GitPython
 
+:: Install Requests
+echo Installing Requests...
+python -m pip install Requests
+
 echo Done.
 endlocal
