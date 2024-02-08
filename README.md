@@ -16,6 +16,11 @@ Make sure to give the App Password **Repository Read** access.
 - Use the template to create a new private repository
 - Clone that repository to the local machine
 - Open app settings and update it with relevant information: `(https://bitbucket.org/{yourWorkspace}/{yourRepo})`
+- Make sure you select the correct version for you.
+- If you have a custom bitbucket url `isEnterprise = true`
+- If you have a premium bitbucket workspace `isPremium = true`
 - If you are having package issues run the [`installer.bat`](https://github.com/illuminat3/TrackBitBucketCommitsOnGithub/blob/main/installer.bat) script.
+
+  
 
 
